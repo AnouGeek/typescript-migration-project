@@ -14,6 +14,7 @@ Always install TypeScript and types as development dependencies to avoid global 
 
 ```bash
 npm install -D typescript @types/react @types/react-dom
+(yarn add -D typescript @types/react @types/react-dom)
 
 ----------------------------------------------------
 
