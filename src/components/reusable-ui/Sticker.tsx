@@ -1,8 +1,6 @@
 import styled from "styled-components"
 import { theme } from "../../theme/theme"
 
-
-
 type StickerProps = {
 label: string
 className?: string
