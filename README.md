@@ -19,6 +19,7 @@ npm install -D typescript @types/react @types/react-dom
 
 2. Configure TypeScript (tsconfig.json)
 Create a tsconfig.json file at the root. The "allowJs": true option is critical for a gradual migration.
+
 {
   "compilerOptions": {
     "target": "ESNext",
@@ -49,6 +50,7 @@ Create a tsconfig.json file at the root. The "allowJs": true option is critical 
 
 3. Configure Node Environment (tsconfig.node.json)
 Used to handle Vite configuration files properly.
+
 {
   "compilerOptions": {
     "composite": true,
@@ -64,10 +66,12 @@ Used to handle Vite configuration files properly.
 
 4. Add Verification Script (package.json)
 Add a script to run the TypeScript compiler in "watchdog" mode (checking for errors without generating files).
+
 "scripts": {
   "typecheck": "tsc --noEmit"
 }
 Usage: Run npm run typecheck to list all remaining type errors.
+
 ----------------------------------------------------
 
 5. Migration Strategy: The "Bottom-Up" Approach
@@ -82,5 +86,3 @@ Define Types/Interfaces for the component props.
 Verify the app still runs.
 
 Repeat for the parent components.
-
-
