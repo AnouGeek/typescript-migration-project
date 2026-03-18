@@ -1,7 +1,13 @@
 import styled from "styled-components"
 import { theme } from "../../theme"
+import { MouseEventHandler } from "react"
 
-export default function Logo({ className, onClick }) {
+type LogoProps = { 
+  className?: string,
+  onClick?: MouseEventHandler<HTMLDivElement>
+}
+
+export default function Logo({ className, onClick }: LogoProps) {
   return (
     <LogoStyled className={className} onClick={onClick}>
       <h1>CRAZEE</h1>
