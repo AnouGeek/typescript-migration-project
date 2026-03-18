@@ -1,8 +1,16 @@
-import React from "react"
 import styled from "styled-components"
 import { theme } from "../../theme"
+import { MouseEventHandler } from "react"
 
-export default function Tab({ label, Icon, onClick, className }) {
+type TabProps = { 
+  label: string, 
+  // Icon: JSX.Element, 
+  Icon: React.ReactNode, 
+  onClick?: MouseEventHandler<HTMLButtonElement>, 
+  className?: string 
+}
+
+export default function Tab({ label, Icon, onClick, className }: TabProps) {
   return (
     <TabStyled onClick={onClick} className={className}>
       <div className="icon">{Icon}</div>
