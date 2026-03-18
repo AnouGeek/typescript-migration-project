@@ -67,10 +67,11 @@ Used to handle Vite configuration files properly.
 
 4. Add Verification Script (package.json)
 Add a script to run the TypeScript compiler in "watchdog" mode (checking for errors without generating files).
-
+```
 "scripts": {
   "typecheck": "tsc --noEmit"
 }
+```
 Usage: Run npm run typecheck to list all remaining type errors.
 
 ----------------------------------------------------
